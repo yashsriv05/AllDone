@@ -9,13 +9,19 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yashsriv-05.AllDone"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.READ_CALENDAR",
+        "android.permission.WRITE_CALENDAR"
+      ],
+      "package": "com.yashsriv_05.AllDone"
     },
     "web": {
       "bundler": "metro",
@@ -32,7 +38,14 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      [
+        "expo-calendar",
+        {
+          "calendarPermission": "The app needs to access your calendar."
+        }
+      ],
+      "expo-sqlite"
     ],
     "experiments": {
       "typedRoutes": true
