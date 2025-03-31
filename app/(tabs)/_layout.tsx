@@ -1,6 +1,6 @@
+import { Ionicons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
 import React from 'react';
-import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export default function TabLayout() {
 
@@ -13,14 +13,14 @@ export default function TabLayout() {
         name="(notes)"
         options={{
           title: 'Notes',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons size={28} name={'book-outline'} color={color} />,
         }}
       />
       <Tabs.Screen
         name="tasks"
         options={{
           title: 'Tasks',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="list.bullet.clipboard" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons size={28} name={'checkmark-done-circle-sharp'} color={color} />,
         }}
       />
     </Tabs>
